@@ -191,7 +191,7 @@ model-viewer {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 20px;
+    /* margin-top: 10px; */
 }
 
 .viewer model-viewer {
