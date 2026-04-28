@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Echos</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">Echos</div>
+    <nav>
+      <a href="#explore">Explore</a>
+      <a href="#playground">Playground</a>
+    </nav>
+  </header>
+
+  <h1 class="title">Where do you belong?</h1>
+
+  <section class="hybrid-timeline">
+    <div class="timeline-line"></div>
+
+    <div class="panel">
+      <div class="row left active">
+        <div class="model">
+          <model-viewer src="models/GPH.glb" auto-rotate camera-controls></model-viewer>
+        </div>
+        <div class="year"><span>1887</span></div>
+        <div class="text">
+          <p>A gramophone is a vintage sound-reproducing machine that uses a hand-cranked mechanism and a needle to play
+            shellac disc records, typically at 78 RPM, producing sound acoustically through a horn. Patented by Emile
+            Berliner in 1887, these devices revolutionized audio playback before the electric era.</p>
+          <img src="assets/Happy.png" class="hover-image">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="row right active">
+        <div class="text">
+          <p>The radio was invented in the mid-1890s, with Guglielmo Marconi widely recognized for developing the first
+            practical radio system and receiving the first patent for wireless telegraphy in 1896. While Marconi is
+            credited with the invention, Nikola Tesla demonstrated wireless communication earlier in 1893, and key,
+            long-distance transmission, and voice broadcasting were pioneered by others.</p>
+          <img src="assets/Happy.png" class="hover-image">
+        </div>
+        <div class="year"><span>1896</span></div>
+        <div class="model">
+          <model-viewer src="models/Radio.glb" auto-rotate camera-controls></model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="row left active">
+        <div class="model">
+          <model-viewer src="models/RCP.glb" auto-rotate camera-controls></model-viewer>
+        </div>
+        <div class="year"><span>1963</span></div>
+        <div class="text">
+          <p>The radio cassette player revolutionized portable audio after its introduction by Philips in 1963.
+            Originally designed for dictation, it gained massive popularity as a "2-in-1" device in the 1970s, enabling
+            users to play tapes and record radio. Its peak came in the 1980s with portable players like the Sony
+            Walkman, dominating until CDs and digital players emerged in the 1990s and 2000s.</p>
+          <img src="assets/Happy.png" class="hover-image">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="row right active">
+        <div class="text">
+          <div class="overlay"></div>
+          <p>The first smartphone, the IBM Simon Personal Communicator, was invented in 1992 and released in 1994,
+            featuring a touchscreen, email, and PDA capabilities. It evolved from 1980s "brick" phones into modern
+            pocket computers, with key milestones including the 2007 iPhone revolutionizing touchscreen interfaces and
+            the 2008 launch of Android.</p>
+          <img src="assets/Sad.png" class="hover-image1">
+        </div>
+        <div class="year"><span>1992</span></div>
+        <div class="model">
+          <model-viewer src="models/SPH.glb" auto-rotate camera-controls></model-viewer>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="explore" class="explore">
+    <h1>Explore</h1>
+
+    <div class="category-card" id="card1" onclick="expandCard('card1')">
+      <h3>Gramophone</h3>
+      <div class="viewer">
+        <button>&#10703;</button>
+        <model-viewer id="gph-view" src="Models/GPH.glb" camera-controls auto-rotate></model-viewer>
+        <button>&#10704;</button>
+      </div>
+      <p>Gramophone</p>
+    </div>
+
+    <div class="category-card" id="card2" onclick="expandCard('card2')">
+      <h3>Radios</h3>
+      <div class="viewer">
+        <button>&#10703;</button>
+        <model-viewer id="rad-view" src="Models/Radio.glb" camera-controls auto-rotate></model-viewer>
+        <button>&#10704;</button>
+      </div>
+      <p>Radio</p>
+    </div>
+
+    <div class="category-card" id="card3" onclick="expandCard('card3')">
+      <h3>Radio Cassette Player</h3>
+      <div class="viewer">
+        <button>⏪</button>
+        <model-viewer id="rcp-view" src="Models/RCP.glb" camera-controls auto-rotate></model-viewer>
+        <button>&#10704;</button>
+      </div>
+      <p>Radio Cassette Player</p>
+    </div>
+  </section>
+
+  <section id="playground" class="playground">
+    <div class="stack">
+      <div class="card layer1"></div>
+      <div class="card layer2"></div>
+      <div class="card layer3"></div>
+      <div class="card main-card">
+        <model-viewer src="Models/RCP.glb" camera-controls auto-rotate></model-viewer>
+
+        <img src="assets/cassette.png" class="cassette c1" id="cass1" onclick="playSong(1)">
+        <img src="assets/cassette.png" class="cassette c2" id="cass2" onclick="playSong(2)">
+        <img src="assets/cassette.png" class="cassette c3" id="cass3" onclick="playSong(3)">
+        <img src="assets/cassette.png" class="cassette c4" id="cass4" onclick="playSong(4)">
+      </div>
+    </div>
+
+    <audio id="song1" src="assets/Song_abhi.mp3"></audio>
+    <audio id="song2" src="assets/Song_haiapna.mp3"></audio>
+    <audio id="song3" src="assets/Song_teramujhse.mp3"></audio>
+    <audio id="song4" src="assets/Song_Lagja.mp3"></audio>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

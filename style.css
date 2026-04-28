@@ -1,0 +1,307 @@
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #F5E6CA;
+    color: #4A3728;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #4A3728;
+    color: #fff;
+    z-index: 100;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.title {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 36px;
+    color: #4A3728;
+}
+
+
+.hybrid-timeline {
+    position: relative;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    bottom: 0px;
+    width: 2px;
+    background: #4A3728;
+    transform: translateX(-50%);
+}
+
+.panel {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 120px 1fr;
+    align-items: center;
+    position: relative;
+    opacity: 1;
+}
+
+.text {
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    color: #2c1f14;
+    padding-left: 100px;
+}
+
+
+.hover-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+.text:hover .hover-image {
+    opacity: 1;
+}
+
+.hover-image1 {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+
+.text:hover .hover-image1 {
+    opacity: 1;
+}
+
+
+model-viewer {
+    width: 500px;
+    height: 500px;
+}
+
+.text {
+    max-width: 350px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.year {
+    position: relative;
+}
+
+.year::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 60px;
+    background: #4A3728;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.year span {
+    position: absolute;
+    top: -20px;
+    font-weight: bold;
+}
+
+
+.row.left .model {
+    justify-self: end;
+}
+
+.row.left .year::before {
+    right: 50%;
+}
+
+.row.left .year span {
+    right: 65%;
+}
+
+.row.right .model {
+    justify-self: start;
+}
+
+.row.right .year::before {
+    left: 50%;
+}
+
+.row.right .year span {
+    left: 65%;
+}
+
+
+.explore {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-card {
+    background: #4A3728;
+    color: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 20px;
+    max-height: 80px;
+    width: 800px;
+    overflow: hidden;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.category-card.expanded {
+    max-height: 500px;
+    background: #E8CFA8;
+    color: #4A3728;
+}
+
+.viewer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.viewer model-viewer {
+    width: 500px;
+    height: 500px;
+}
+
+.category-card h3 {
+    font-size: 24px;
+    padding-left: 12px;
+}
+
+.viewer button {
+    background: none;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+    color: #4A3728;
+}
+
+.playground {
+    padding: 150px;
+    display: flex;
+    justify-content: center;
+    height: 450px;
+}
+
+.stack {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.card {
+    width: 500px;
+    height: 400px;
+    background: #E8CFA8;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.layer1 {
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    border: 2px solid #e6ca9c;
+}
+
+.layer2 {
+    top: 5px;
+    left: 5px;
+    opacity: 0.6;
+    border: 2px solid #e6ca9c;
+}
+
+.layer3 {
+    top: 10px;
+    left: 10px;
+    border: 2px solid #e6ca9c;
+}
+
+.main-card {
+    position: relative;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E8CFA8;
+    border: 2px solid #e6ca9c;
+}
+
+.cassette {
+    width: 40px;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.spin {
+    animation: rotateCassette 2s linear infinite;
+}
+
+@keyframes rotateCassette {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.c1 {
+    top: 20px;
+    left: 20px;
+}
+
+.c2 {
+    top: 80px;
+    right: 30px;
+}
+
+.c3 {
+    bottom: 40px;
+    left: 50px;
+}
+
+.c4 {
+    bottom: 20px;
+    right: 60px;
+}
