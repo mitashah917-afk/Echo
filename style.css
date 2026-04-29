@@ -212,24 +212,24 @@ model-viewer {
 }
 
 .playground {
+    padding: 150px;
     display: flex;
     justify-content: center;
-    align-items: center; 
-    height: 100vh;
+    height: 450px;
 }
 
 .stack {
     position: relative;
-    width: 900px;
-    height: 900px;
+    width: 500px;
+    height: 500px;
 }
 
 .card {
-    width: 800px;
+    width: 500px;
     height: 400px;
     background: #E8CFA8;
     border-radius: 20px;
-    position: absolute
+    position: absolute;
 }
 
 .layer1 {
