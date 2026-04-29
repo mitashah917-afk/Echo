@@ -1,7 +1,7 @@
 
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: montserrat;
     background: #F5E6CA;
     color: #4A3728;
 }
@@ -190,8 +190,7 @@ model-viewer {
 .viewer {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    /* margin-top: 10px; */
+    justify-content: center;
 }
 
 .viewer model-viewer {
