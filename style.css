@@ -264,7 +264,7 @@ model-viewer {
 }
 
 .cassette {
-    width: 40px;
+    width: 60px;
     position: absolute;
     cursor: pointer;
     transition: 0.3s;
