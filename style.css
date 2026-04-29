@@ -229,9 +229,7 @@ model-viewer {
     height: 400px;
     background: #E8CFA8;
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute
 }
 
 .layer1 {
