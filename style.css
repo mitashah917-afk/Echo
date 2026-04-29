@@ -230,6 +230,7 @@ model-viewer {
     background: #E8CFA8;
     border-radius: 20px;
     position: absolute;
+    right: 150px,
 }
 
 .layer1 {
