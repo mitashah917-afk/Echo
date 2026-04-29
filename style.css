@@ -64,7 +64,7 @@ body {
 .text {
     position: relative;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     color: #2c1f14;
     padding-left: 100px;
 }
